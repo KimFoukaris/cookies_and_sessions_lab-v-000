@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def add
-
+    session[:cart] << product_params[:product]
+    redirect_to product_path
   end
 
   private
